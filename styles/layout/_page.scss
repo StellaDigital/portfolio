@@ -1,0 +1,52 @@
+
+html{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+html, body{
+  overscroll-behavior: none;
+}
+
+main{
+  width: 100vw;
+  padding-top: $header-desktop;
+}
+
+.container{
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+html.stop-scroll{
+  overflow: hidden;
+}
+
+
+@media screen and (max-width: $breakpoint-mobile) {
+
+  main{
+    padding-top: 80px;
+  }
+
+  .container{
+    max-width: $container-width--mobile;
+    margin: 0 auto;
+  }
+
+}
+
+.scroll-anchor{
+  position: relative;
+  top: -300px;
+  background-color: transparent;
+  height: 2px;
+  width: 100%;
+  display: block;
+  z-index: 100;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

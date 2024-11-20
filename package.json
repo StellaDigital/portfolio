@@ -1,0 +1,43 @@
+{
+  "name": "nextfire",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run watch:sass & next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "watch:sass": "npx sass --watch styles/main.scss styles/main.css"
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "^14.2.3",
+    "browser-image-compression": "^2.0.2",
+    "eslint-config-next": "^14.2.3",
+    "firebase": "^8.10.1",
+    "framer-motion": "^10.15.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.kebabcase": "^4.1.1",
+    "next": "13.2.4",
+    "react": "^18.3.1",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-dom": "^18.3.1",
+    "react-easy-sort": "^1.6.0",
+    "react-firebase-hooks": "^3.0.5",
+    "react-hook-form": "^7.45.4",
+    "react-hot-toast": "^1.0.2",
+    "react-icons": "^5.2.1",
+    "react-lazyload": "^3.2.1",
+    "react-markdown": "^5.0.3",
+    "react-microsoft-clarity": "^1.2.0",
+    "react-responsive": "^10.0.0",
+    "react-responsive-masonry": "^2.2.0",
+    "react-router-dom": "^6.24.1",
+    "react-slick": "^0.30.2",
+    "scroller-motion": "^1.2.3",
+    "sharp": "^0.33.3",
+    "yet-another-react-lightbox": "^3.17.3"
+  },
+  "devDependencies": {
+    "sass": "^1.64.2"
+  }
+}

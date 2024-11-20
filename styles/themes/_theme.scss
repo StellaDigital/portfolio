@@ -1,0 +1,95 @@
+html, body{
+  scroll-behavior: smooth;
+}
+
+body{
+
+  background-color: $color-main-primary;
+  color: $color-main-secondary;
+  overflow: hidden;
+
+  /*
+  &:before {
+    content: "";
+    animation: grain 15s steps(15) infinite;
+    background-image: url("https://media.istockphoto.com/id/1416822331/vector/distressed-black-texture.jpg?s=612x612&w=0&k=20&c=0i23pJly51z7b_esoNCuEuezJf2smmCUa8BMOsjG9Mo=");
+    height: 300%;
+    left: -50%;
+    opacity: 0.035;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    pointer-events: none;
+    z-index: -1;
+  }
+    */
+
+}
+
+main{
+  &::after{
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0, 0) 90vh, rgba(0,0,0, .2) 95vh, rgba($color-main-primary, .8) 100vh);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: calc($z-index-elements + 1);
+    pointer-events: none;
+  }
+}
+
+/* text select */
+
+::selection, ::-moz-selection  {
+
+}
+
+.caret-transparent{
+  caret-color: transparent;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+
+}
+::-webkit-scrollbar-thumb {
+
+}
+
+.scrollMotion{
+  overflow: hidden !important;
+  z-index: 11;
+  position: relative;
+
+  & > div > div{
+    overflow: hidden !important;
+  }
+
+}
+
+.scroll-to-top{
+  --size: 50px;
+  position: fixed;
+  top: calc(100% - 32px);
+  right: 32px;
+  transform: translateY(-100%);
+  @include absoluteSquare(var(--size));
+  border-radius: 50%;
+  background-color: red;
+}

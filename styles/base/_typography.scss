@@ -1,0 +1,47 @@
+*, body{
+  font-family: $font-primary;
+  line-height: 1.3em;
+  letter-spacing: -.05em;
+}
+
+h1{
+  font-size: 132px;
+}
+
+h2{
+  font-size: 56px;
+}
+
+h3{
+  font-size: 32px;
+}
+
+a{
+  color: $color-main-secondary;
+}
+
+.success{
+  color: $color-ui-success !important;
+}
+
+.error{
+  color: $color-ui-error !important;
+}
+
+@media screen and (max-width: 1200px) {
+  h1{
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  h1{
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  h1{
+    font-size: 46px;
+  }
+}

@@ -1,0 +1,52 @@
+@mixin navbar-item($shape: false){
+
+  --size: 56px;
+  @if $shape {
+    --size: 58px;
+  }
+
+  height: var(--size);
+  width: var(--size);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-main-secondary-80;
+  background-color: $color-main-primary-100;
+  transition: $transition-all-classic;
+  border-radius: 200px;
+  cursor: pointer;
+  border: solid 2px transparent;
+
+  &:hover{
+    border-color: $color-main-primary-40;
+  }
+
+  &:active{
+    background-color: $color-main-primary-60;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    --size: 48px;
+  }
+  
+
+}
+
+
+@mixin absoluteSquare($size){
+  width: $size;
+  height: $size;
+  min-width: $size;
+  min-height: $size;
+  max-width: $size;
+  max-height: $size;
+}
+
+@mixin backgroundIcon($path){
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url($path);
+}
+

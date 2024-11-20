@@ -1,0 +1,110 @@
+.login{
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(90vh - $header-desktop);
+  }
+
+  &__box{
+
+    z-index: calc($z-index-elements + 1);
+    padding: 32px;
+    border-radius: 12px;
+    background-color: $color-main-primary-100;
+    min-width: 320px;
+
+    &__title{
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+
+    &__link{
+      text-decoration: none;
+    }
+
+    &__button{
+
+      &--admin{
+        background-color: $color-main-primary-60;
+      }
+
+      &.zaujem{
+
+        width: calc(100% - 6px) !important;
+        border-radius: 12px;
+        margin: 12px 0 0 3px;
+
+        &::after{
+          border-radius: 12px;
+        }
+
+      }
+
+      background-color: $color-main-primary-80;
+      border: none;
+      outline: none;
+      border-radius: 12px;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      column-gap: 12px;
+      cursor: pointer;
+      margin-top: 12px;
+
+      &__img{
+
+        &--out{
+
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $color-main-primary-40;
+          border-radius: 50%;
+
+          svg{
+            width: 20px;
+            height: 20px;
+            fill: $color-main-secondary-80;
+          }
+
+        }
+
+      }
+
+      &__text{
+        color: $color-main-secondary-40;
+        font-weight: 400;
+        font-size: 18px;
+      }
+
+      &:hover{
+        background-color: $color-main-primary-60;
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+
+    .container{
+      min-height: calc(100vh - $header-desktop);
+      align-items: flex-end;
+      padding-bottom: 6px;
+    }
+
+    &__box{
+      padding: 24px;
+      width: 100%;
+    }
+
+  }
+
+}

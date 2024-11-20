@@ -1,0 +1,145 @@
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='password'],
+input[type='number'],
+input[type='url'],
+textarea,
+.input{
+  padding: 16px 24px;
+  font-size: 18px;
+  background-color: $color-main-primary-80;
+  outline: none;
+  border: solid 2px $color-main-primary-100;
+  color: $color-main-secondary-60;
+  font-weight: 400;
+  border-radius: 12px;
+  border: solid 2px transparent;
+  
+  &::placeholder{
+    color: $color-main-primary-40;
+  }
+
+  &:hover{
+    border-color: $color-main-primary-60;
+  }
+
+  &:focus{
+    border-color: $color-main-secondary-40;
+  }
+
+}
+
+textarea{
+
+  --height: 300px;
+
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+
+  height: var(--height);
+  min-height: 80px;
+  max-height: var(--height);
+
+}
+
+input[type="checkbox"]{
+
+  --width: 40px;
+  --height: 20px;
+
+  width: var(--width);
+  max-width: var(--width);
+  min-width: var(--width);
+  
+  height: var(--height);
+  max-height: var(--height);
+  min-height: var(--height);
+
+  border: solid 2px $color-main-primary-40;
+  background-color: $color-ui-error;
+  border-radius: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: background-color .25s ease-in-out;
+  cursor: pointer;
+
+  &::after{
+
+    --size: calc(var(--height) * 1.05);
+
+    content: '';
+    position: absolute;
+    left: -2px;
+    display: block;
+
+    width: var(--size);
+    max-width: var(--size);
+    min-width: var(--size);
+    
+    height: var(--size);
+    max-height: var(--size);
+    min-height: var(--size);
+
+    background-color: $color-main-secondary;
+    box-shadow: 0 0 10px rgba($color-main-primary, .5);
+    border-radius: 50%;
+
+    transition: left .25s ease-in-out;
+
+  }
+
+  &:checked{
+
+    background-color: $color-ui-success;
+
+    &::after{
+      left: calc(var(--width) - var(--size));
+    }
+  }
+
+}
+
+.checkbox{
+  display: flex;
+  column-gap: 6px;
+  align-items: center;
+  width: 100%;
+
+  &__label{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $color-main-secondary-40;
+    width: fit-content;
+    margin: 0;
+    position: relative;
+    bottom: -1px;
+    cursor: pointer;
+  }
+
+}
+
+.label{
+  font-size: 16px;
+  text-transform: uppercase;
+  color: rgba($color-main-secondary, .5);
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: block;
+
+  &__desc{
+
+    font-size: 85%;
+    color: rgba($color-main-secondary, .25);
+    text-transform: lowercase;
+    display: block;
+
+    a{
+      color: rgba($color-main-secondary-40, .5);
+    }
+
+  }
+
+}

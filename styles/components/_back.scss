@@ -1,0 +1,59 @@
+.back{
+
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  position: fixed;
+  left: 0;
+  top: 150px;
+
+  padding: 16px 16px 16px 12px;
+  background-color: rgba($color-main-primary-100, 1);
+  box-shadow: 0 0 20px rgba($color-main-primary, 1);
+  border-radius: 0 12px 12px 0;
+  z-index: $z-index-header;
+  cursor: pointer;
+  transition: $transition-all-classic;
+
+  &__icon{
+
+    --size: 36px;
+    display: flex;
+    align-items: center;
+
+    &__svg{
+
+      --size: 24px;
+      width: var(--size);
+      height: var(--size);
+      fill: rgba($color-main-secondary-60, .5);
+  
+    }
+
+  }
+
+
+
+  &__text{
+
+    color: rgba($color-main-secondary-60, .5);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    bottom: -1px;
+    width: 0;
+    overflow: hidden;
+    margin-left: -12px;
+    transition: $transition-all-classic;
+
+  }
+
+  &:hover{
+    .back__text{
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+}

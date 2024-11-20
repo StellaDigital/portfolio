@@ -1,0 +1,254 @@
+.gallery-feed{
+
+  //--img-height: 500px;
+
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  row-gap: 150px;
+  margin: 0 auto;
+
+  &__none{
+    font-size: 24px;
+    text-align: center;
+
+    span{
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+  }
+
+  &__item{
+
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    &__frame{
+
+      //min-height: var(--img-height);
+      width: 100%;
+      position: relative;
+      object-fit: cover;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      max-height: 70vh;
+      cursor: pointer;
+      z-index: calc($z-index-elements + 1);
+
+      &::after{
+
+        content: 'Zobraziť';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 36px;
+        aspect-ratio: 1/1;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: rgba($color-main-secondary-100, .9);
+        color: $color-main-primary-100;
+        font-size: 24px;
+        font-weight: 400;
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity .7s cubic-bezier(0.43, 0.13, 0.23, 0.96);
+
+      }
+
+      &:hover{
+        &::after{
+          opacity: 1;
+        }
+      }
+
+      &__img{
+        
+        display: block;
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: scale cubic-bezier(0.43, 0.13, 0.23, 0.96);
+
+        &__img,
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &--placeholder{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          display: block;
+          background-color: $color-main-primary-100;
+        }
+
+      }
+
+      &__categories{
+
+        max-width: 30%;
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        overflow-x: scroll;
+        margin: 0 0 0 auto;
+        mix-blend-mode: hard-light;
+        
+        &__item{
+
+          @extend .categories__listing__item;
+          @extend .categories__listing__item__text;
+          margin-left: 0 !important;
+          padding: 12px 16px !important;
+          font-size: 16px !important;
+          border-color: rgba($color-main-secondary, .8) !important;
+          color: $color-main-secondary !important;
+
+          &::after{
+            opacity: .35;
+            z-index: -1;
+          }
+
+        }
+
+        &::-webkit-scrollbar{
+          display: none;
+        }
+
+      }
+
+
+    }
+
+    &__info{
+
+      margin: 24px auto 0 auto;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+
+
+      &__title{
+        width: 100%;
+        max-width: 30%;
+        font-size: 28px;
+        font-weight: 400;
+        height: fit-content;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      &__desc{
+
+        width: 420px;
+        max-width: 30%;
+        line-height: 1.3em;
+        text-align: right;
+
+        p{
+          font-size: 20px;
+        }
+
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+
+    row-gap: 100px;
+
+    &__item{
+
+      &__frame{
+        &::after{
+          display: none;
+        }
+
+        &__categories{
+
+          width: 100%;
+          white-space: initial;
+          flex-flow: row wrap;
+          justify-content: flex-end;
+          row-gap: 6px;
+          bottom: 10px !important;
+          right: 10px !important;
+
+          &__item{
+            font-size: 12px !important;
+            padding: 8px 14px 9px 14px !important;
+          }
+        }
+
+      }
+
+      &__info{
+        &__desc{
+          max-width: 50%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+
+    &__none{
+      margin-top: 32px;
+    }
+
+    &__item{
+
+      &__info{
+        flex-flow: column;
+        align-items: center;
+        row-gap: 6px;
+
+        &__title{
+          max-width: unset;
+          font-size: 24px;
+        }
+
+        &__desc{
+          width: 100%;
+          max-width: unset;
+          text-align: left;
+
+          p{
+            font-size: 16px;
+          }
+
+        }
+
+      }
+
+      &__frame{
+
+        &__categories{
+          &__item{
+            font-size: 12px !important;
+            padding: 3px 8px 4px !important;
+          }
+        }
+
+      }
+
+    }
+  }
+
+}

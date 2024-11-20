@@ -1,0 +1,68 @@
+/* ### BREAKPOINTS ### */
+
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 768px;
+
+/* ### LAYOUT ### */
+$container-width: 85%;
+$container-width--mobile: 85%;
+
+$container-width-narrow: 1100px;
+
+$padding-desktop: 24px;
+$padding-mobile: 16px;
+
+/* ### GLOBAL ### */
+$z-index-elements:10;
+$z-index-header:50;
+$z-index-modals:100;
+
+/* ### COLORS ### */
+$color-blue: #1763dc;
+
+$color-main-primary: #0c0c0c;
+$color-main-secondary: #f2f2f2;
+$color-main-white: #FFFFFF;
+$color-main-black: #000000;
+
+$color-main-primary-100: #1a1a1a;
+$color-main-primary-80: #262626;
+$color-main-primary-60: #333333;
+$color-main-primary-40: #404040;
+
+$color-main-secondary-100: #e6e6e6;
+$color-main-secondary-80: #d9d9d9;
+$color-main-secondary-60: #cccccc;
+$color-main-secondary-40: #bfbfbf;
+
+$color-ui-success: #248024;
+$color-ui-error: #AB1D31;
+
+$color-ui-success--hover: #1b611b;
+$color-ui-error--hover: #6d131f;
+
+
+/* ### FONTS ### */
+$font-primary: SpaceGrotesk, sans-serif;
+//$font-secondary: roboto, sans-serif;
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('/fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap; /* Fallback font until loaded */
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('/fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap; /* Fallback font until loaded */
+}
+
+
+/* ### TRANSITIONS ### */
+$transition-time: .25s;
+$transition-all-classic: all $transition-time ease-in-out;
+
+/* ### GLOBAL COMPONENTS ### */
+$header-desktop: 100px;
