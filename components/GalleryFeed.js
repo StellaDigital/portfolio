@@ -170,7 +170,7 @@ const GalleryItem = React.memo(function GalleryItem({ gallery, admin, categories
                   src={gallery.imageUrl}
                   priority={gallery.slug === 'home-featured'}
                   loading="lazy"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 70vw, (max-width: 1800px) 80vw, 80vw"
+                  sizes="(max-width: 768px) 65vw, (max-width: 1200px) 85vw, (max-width: 1800px) 90vw, 90vw"
                 />
               </motion.div>
             ) : (
