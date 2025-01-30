@@ -208,14 +208,14 @@ export default function GalleryDetail({ galleryPost, gallery, images, featuredIm
                     width={800}
                     height={800}
                     src={img.url}
-                    loading='lazy'
+                    loading='eager'
                     placeholder='blur' // Blur-up technique
-                    blurDataURL='/no-image.jpeg' // Placeholder image
+                    blurDataURL='/no-image.jpg' // Placeholder image
                     sizes='(max-width: 768px) 70vw, (max-width: 1200px) 50vw, 100vw'
                     className='images-listing__item__img__img'
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = '/no-image.jpeg'; // Fallback image
+                      e.target.src = '/no-image.jpg'; // Fallback image
                     }}
                   />
                 </motion.div>
