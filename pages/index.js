@@ -55,7 +55,13 @@ export default function Home(props) {
   const [loading, setLoading] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const resultsRef = useRef(null);
-  
+
+  const [client, setClient] = useState(false);
+
+  useEffect(() => {
+    setClient(true);
+  }, []);
+
   const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
   const enableAnimations = !isMobile;
 
@@ -75,7 +81,7 @@ export default function Home(props) {
       <Navbar categories={props.categories} />
       <PageLayout />
 
-      { enableAnimations ? <AnimatedHeader />
+      { client && enableAnimations ? <AnimatedHeader />
       :
         <div className='container'>
           <div className='page-header'> 
