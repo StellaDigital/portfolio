@@ -229,7 +229,7 @@ export default function GalleryDetail({ galleryPost, gallery, images, featuredIm
 
   return (
     <div className='gallery-single'>
-      {/*<PageTransition pageIsLoaded={true} loadingProgress={100} />*/}
+      <PageTransition pageIsLoaded={true} loadingProgress={100} />
       <Navbar />
       <PageLayout />
 

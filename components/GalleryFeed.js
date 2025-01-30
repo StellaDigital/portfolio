@@ -196,7 +196,7 @@ const GalleryItem = React.memo(function GalleryItem({ gallery, admin, categories
         exit={{ opacity: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <Link className="gallery-feed__item__info__title" href={`/${gallery.slug}`} scroll={false}>
+        <Link className="gallery-feed__item__info__title" href={`/${gallery.slug}`} scroll={false} prefetch>
           {gallery.title}
         </Link>
         <span className="gallery-feed__item__info__desc">
@@ -208,7 +208,7 @@ const GalleryItem = React.memo(function GalleryItem({ gallery, admin, categories
             <p className={`gallery-feed__item__info__published ${gallery.published ? 'gallery-feed__item__info__published--live' : ''}`}>
               {gallery.published ? 'Publikované' : 'Koncept'}
             </p>
-            <Link href={`/admin/${gallery.slug}`}>
+            <Link href={`/admin/${gallery.slug}`} prefetch>
               <p className="gallery-feed__item__info__edit">Editovať</p>
             </Link>
           </>

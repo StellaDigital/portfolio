@@ -77,7 +77,7 @@ export default function Home(props) {
     
     <div className='homepage'>
 
-      {/*<PageTransition pageIsLoaded={true} />*/}
+      <PageTransition pageIsLoaded={true} />
       <Navbar categories={props.categories} />
       <PageLayout />
 

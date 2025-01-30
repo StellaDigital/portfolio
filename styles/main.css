@@ -1772,7 +1772,7 @@ html.stop-scroll {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #333333;
+  background-color: #1a1a1a;
   position: fixed;
   pointer-events: none;
   z-index: 100;
